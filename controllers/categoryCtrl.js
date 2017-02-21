@@ -11,6 +11,13 @@ module.exports.getCategories = function (req, res) {
     });
 }
 
+// ** GET single category
+module.exports.getCategory = function (req, res) {
+    Category.find({id : req.params.id}).then(function (categories) {
+        res.json(categories);
+    });
+}
+
 // ** GET institutions category
 module.exports.getInstitutions = function (req, res) {
     Institution.findAll({ where: {
