@@ -2,22 +2,6 @@
 
 module.exports = {
   up: function (queryInterface, Sequelize) {
-    /* Creates Criteria table */
-    queryInterface.createTable('criteria', {
-      id: {
-        type : Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-      },
-      name: Sequelize.STRING,
-      description: Sequelize.TEXT,
-      createdAt: {
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        type: Sequelize.DATE
-      },
-    });
     /* Creates Ratings table */
     queryInterface.createTable('ratings', {
       id: {
@@ -47,7 +31,5 @@ module.exports = {
 
   down: function (queryInterface, Sequelize) {
     queryInterface.dropTable('ratings');
-    queryInterface.dropTable('criteria');
-
   }
 };
