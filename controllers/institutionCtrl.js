@@ -5,25 +5,16 @@ var Institution = require('../models/institution');
 var fs = require('fs');
 var inst = require('../public/institutions/dispensaire.json');
 // ** GET all institutions
-module.exports.getInstitutions = function (req, res) {
+module.exports.getAllInstitutions = function (req, res) {
     Institution.findAll({}).then(function (institutions) {
         res.json(institutions);
     });
 }
 
-// ** GET all hospitals
-module.exports.getHospitals = function (req, res) {
+// ** GET institutions category
+module.exports.getInstitutions = function (req, res) {
     Institution.findAll({ where: {
-        category: 1
-    }}).then(function (hospitals) {
-        res.json(hospitals);
-    });
-}
-
-// ** GET all schools
-module.exports.getSchools = function (req, res) {
-    Institution.findAll({ where: {
-        category: 2
+        category: req.params.category_id
     }}).then(function (schools) {
         res.json(schools);
     });

@@ -7,11 +7,9 @@ var router = express.Router();
 var institutionCtrl = require('../controllers/institutionCtrl');
 
 // ** GET all institutions
-router.get('/', institutionCtrl.getInstitutions);
-// ** GET all hospitals
-router.get('/hospitals', institutionCtrl.getHospitals);
-// ** GET all schools
-router.get('/schools', institutionCtrl.getSchools);
+router.get('/', institutionCtrl.getAllInstitutions);
+// ** GET institutions
+router.get('/:category_id', institutionCtrl.getInstitutions);
 // ** POST institutions from json file
 router.post('/:category_id', institutionCtrl.addInstitutions);
 
