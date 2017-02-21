@@ -14,7 +14,7 @@ module.exports.getCategories = function (req, res) {
 // ** GET institutions category
 module.exports.getInstitutions = function (req, res) {
     Institution.findAll({ where: {
-        category: req.params.category_id
+        category: req.params.id
     }}).then(function (institutions) {
         res.json(institutions);
     });
