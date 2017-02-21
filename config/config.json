@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "notchapp",
-    "host": "127.0.0.1",
+    "username": "sql11160130",
+    "password": "HyAngNPAp6",
+    "database": "sql11160130",
+    "host": "sql11.freemysqlhosting.net",
     "dialect": "mysql"
   },
   "test": {

@@ -3,14 +3,13 @@
  */
 require('dotenv').config();
 var Sequelize = require('sequelize');
-//var seq = new Sequelize('notchapp', 'root');
 
 var sequelize = new Sequelize(
-    process.env.DB_DATABASE,
-    process.env.DB_USERNAME,
-    process.env.DB_PASSWORD,
+    process.env.DB_REMOTE_DATABASE,
+    process.env.DB_REMOTE_USERNAME,
+    process.env.DB_REMOTE_PASSWORD,
     {
-        host: process.env.DB_HOST,
+        host: process.env.DB_REMOTE_HOST,
         dialect: process.env.DB_CONNECTION,
         define: {
             timestamps: false
