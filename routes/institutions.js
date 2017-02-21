@@ -9,7 +9,7 @@ var institutionCtrl = require('../controllers/institutionCtrl');
 // ** GET all institutions
 router.get('/', institutionCtrl.getAllInstitutions);
 // ** GET institutions
-router.get('/:category_id', institutionCtrl.getInstitutions);
+router.get('/:id', institutionCtrl.getInstitution);
 // ** POST institutions from json file
 router.post('/:category_id', institutionCtrl.addInstitutions);
 

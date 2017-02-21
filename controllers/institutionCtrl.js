@@ -11,12 +11,10 @@ module.exports.getAllInstitutions = function (req, res) {
     });
 }
 
-// ** GET institutions category
-module.exports.getInstitutions = function (req, res) {
-    Institution.findAll({ where: {
-        category: req.params.category_id
-    }}).then(function (schools) {
-        res.json(schools);
+// ** GET all institutions
+module.exports.getInstitution = function (req, res) {
+    Institution.find({id : req.params.id}).then(function (institutions) {
+        res.json(institutions);
     });
 }
 
