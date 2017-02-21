@@ -1,0 +1,23 @@
+{
+  "name": "notchapp-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "dotenv": "^4.0.0",
+    "express": "~4.14.0",
+    "fs": "0.0.1-security",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "mysql": "^2.13.0",
+    "nodemon": "^1.11.0",
+    "sequelize": "^3.30.2",
+    "sequelize-cli": "^2.5.1",
+    "serve-favicon": "~2.3.0"
+  }
+}
